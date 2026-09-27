@@ -1,0 +1,102 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #dedede;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 10px 0;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Mobile View: Mobile-first 1-column grid with 10px gap */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+figure {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+figure img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+figcaption {
+  font-size: 18px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Tablet View (min-width: 772px) */
+@media (min-width: 772px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  figure {
+    border-radius: 50%;
+  }
+
+  figure:last-child {
+    grid-column: span 2;
+  }
+}
+
+/* Large Screen View (min-width: 992px) */
+@media (min-width: 992px) {
+  figure {
+    border-radius: 0;
+  }
+
+  figure:nth-child(3n) {
+    grid-column: span 2;
+  }
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Prefers Dark Color Scheme */
+@media (prefers-color-scheme: dark) {
+  figure {
+    background-color: #222222;
+    color: #ffeb3b;
+    border-color: #000000;
+  }
+}
